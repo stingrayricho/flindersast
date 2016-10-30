@@ -5,65 +5,34 @@
     <meta name="viewport" content="width=device-width">
   </head>
   <body>
+	<div id="row-1">
+
 	<div id="col-1">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="flag" id="error-flag">
-                        ERROR
-                    </td>
-                </tr>
-                <tr>
-                    <td class="flag" id="limit-flag">
-                        LIMIT
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <h2>Battery</h2>
-        <table>
-            <tbody>
-                <tr>
-                    <td id="packAmpHours">
-                    </td>
-                    <td id="packChargeState">
-                    </td>
-                    <td id="packVoltage">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-	</div>
-	<div id="col-2">
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <div id="speedometer" style="width: 400px; height: 250px;"></div>
-                        <div id="rpm"></div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div id="odometer">
-            14523 m
-        </div>
-
-
+        	<h2>Battery</h2>
+                    <div id="packAmpHours"></div>
+                    <div id="packChargeState"></div>
+                    <div id="packVoltage"></div>
 	</div>
 	<div id="col-3">
-        <h2>Temperatures</h2>
-        <table>
-            <tbody>
-                <tr>
-        <td id="motorControlerTemp" style="width: 250px;"></td>
-        <td id="motorTemp" style="width: 250px;"></td>
-        <td id="batteryHeatsinkTemp" style="width: 250px;"></td>
-                </tr>
-            </tbody>
-        </table>
+                        <div id="speedometer"></div>
+                        <div id="rpm"></div>	
+			<h4>Odometer</h4>
+        		<div id="odometer"> 14523 m </div>
+                    	<div class="flag" id="flag">
+                        ERROR
+                    	</div>
+                    	<div class="flag" id="flag">
+                        LIMIT
+                    	</div>				
+	</div>
+	<div id="col-2">
+        	<h2>Temp</h2>
+        	<div id="motorControlerTemp"></div>
+        	<div id="motorTemp"></div>
+        	<div id="batteryHeatsinkTemp"></div>
+	</div>
+	
+
 	</div>
         <script type="text/javascript" src="action.js"></script>
     </body>

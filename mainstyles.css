@@ -2,25 +2,66 @@
 table {
     width: 100%;
 }
+h4 {
+padding:2px;
+margin:2px;
+}
 td.flag {
     border: 1px solid black;
     font-size: 36px;
     height: 100px;
     text-align: center;
 }
-div#col-1,
-div#col-2,
-div#col-3 {
-	border: 1px dashed red;
-	border-radius: 12px;
+div#col-1 {
+	border: 2px dashed red;
 	font-family: 'Karla';
 	padding: 12px;
+	float: left;
 	text-align: center;
-	width: 33%;
-}
-
+	margin:2px;
+	}
+div#col-2 {
+	border: 2px dashed red;
+	font-family: 'Karla';
+	padding: 12px;
+	float: left;
+	text-align: center;
+	margin:2px;
+	}
+div#col-3 {
+	border: 2px dashed red;
+	font-family: 'Karla';
+	padding: 12px;
+	float: left;
+	text-align:center;
+	margin:2px;	
+	}
 div#odometer {
-    background-color: black;
-    color: white;
-    font-size: 60px;
+    	background-color: black;
+	width: 100%;
+ 	color: white;
+    	font-size: 40px;
+	text-align: center;
+}
+div#speedometer {
+}
+div#packAmpHours,
+div#packChargeState,
+div#packVoltage {
+}
+div#motorControlerTemp,
+div#motorTemp,
+div#batteryHeatsinkTemp {
+}
+div#flag{
+	text-align: center;
+	border:2px black;
+	border-style:solid;
+	padding:3px;
+	margin-bottom:5px;
+	margin-top:15px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:30px;
+	width:50%;
 }

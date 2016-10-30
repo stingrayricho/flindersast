@@ -189,7 +189,7 @@ function drawPackVoltageChart() {
 function drawRpmChart() {
     var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
-        ['Battery', rpm]
+        ['RPM', rpm]
     ]);
 
     var options = {
