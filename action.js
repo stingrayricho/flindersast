@@ -87,11 +87,11 @@ google.charts.setOnLoadCallback(drawSpeedometerChart);
 function drawBatteryHeatsinkTempChart() {
     var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
-        ['Battery', batteryHeatsinkTemp]
+        ['Battery C', batteryHeatsinkTemp]
     ]);
 
     var options = {
-        width: 400, height: 120,
+        width: 400, height: 150,
         redFrom: 90, redTo: 100,
         yellowFrom: 75, yellowTo: 90,
         minorTicks: 5
@@ -104,11 +104,11 @@ function drawBatteryHeatsinkTempChart() {
 function drawHeatsinkTempChart() {
     var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
-        ['Heatsink', heatsinkTemp]
+        ['Heatsink C', heatsinkTemp]
     ]);
 
     var options = {
-        width: 400, height: 120,
+        width: 400, height: 150,
         redFrom: 90, redTo: 100,
         yellowFrom: 75, yellowTo: 90,
         minorTicks: 5
@@ -121,11 +121,11 @@ function drawHeatsinkTempChart() {
 function drawMotorTempChart() {
     var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
-        ['Motor', motorTemp]
+        ['Motor C', motorTemp]
     ]);
 
     var options = {
-        width: 400, height: 120,
+        width: 400, height: 150,
         redFrom: 90, redTo: 100,
         yellowFrom: 75, yellowTo: 90,
         minorTicks: 5
@@ -138,14 +138,14 @@ function drawMotorTempChart() {
 function drawPackAmpHoursChart() {
     var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
-        ['AHr', packAmpHours]
+        ['AmpHours', packAmpHours]
     ]);
 
     var options = {
-        width: 400, height: 120,
-        redFrom: 90, redTo: 100,
-        yellowFrom: 75, yellowTo: 90,
-        minorTicks: 5
+        width: 400, height: 150,
+        redFrom: 400, redTo: 500,
+        yellowFrom: 250, yellowTo: 400,
+        minorTicks: 5, max:500 
     };
 
     var chart = new google.visualization.Gauge(document.getElementById('packAmpHours'));
@@ -159,9 +159,9 @@ function drawPackChargeStateChart() {
     ]);
 
     var options = {
-        width: 400, height: 120,
-        redFrom: 90, redTo: 100,
-        yellowFrom: 75, yellowTo: 90,
+        width: 400, height: 150,
+        redFrom: 0, redTo: 10,
+        yellowFrom: 10, yellowTo: 40,
         minorTicks: 5
     };
 
@@ -172,14 +172,14 @@ function drawPackChargeStateChart() {
 function drawPackVoltageChart() {
     var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
-        ['Voltage', packVoltage]
+        ['Voltage V', packVoltage]
     ]);
 
     var options = {
-        width: 400, height: 120,
-        redFrom: 90, redTo: 100,
-        yellowFrom: 75, yellowTo: 90,
-        minorTicks: 5
+        width: 400, height: 150,
+        redFrom: 400, redTo: 500,
+        yellowFrom: 250, yellowTo: 400,
+        minorTicks: 5, max:500 
     };
 
     var chart = new google.visualization.Gauge(document.getElementById('packVoltage'));
@@ -193,7 +193,7 @@ function drawRpmChart() {
     ]);
 
     var options = {
-        width: 400, height: 120,
+        width: 400, height: 150,
         redFrom: 90, redTo: 100,
         yellowFrom: 75, yellowTo: 90,
         minorTicks: 5
@@ -208,11 +208,11 @@ function drawSpeedometerChart() {
 
 	var data = google.visualization.arrayToDataTable([
 	  ['Label', 'Value'],
-	  ['Velocity', speed]
+	  ['Velocity m/s', speed]
 	]);
 
 	var options = {
-	  width: 800, height: 240,
+	  width: 800, height: 260,
 	  redFrom: 90, redTo: 100,
 	  yellowFrom:75, yellowTo: 90,
 	  minorTicks: 5
