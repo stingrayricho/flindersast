@@ -212,7 +212,7 @@ function drawRpmChart() {
     ]);
 
     var options = {
-        width: 400, height: 150,
+        width: 300, height: 115,
         redFrom: 90, redTo: 100,
         yellowFrom: 75, yellowTo: 90,
         minorTicks: 5
