@@ -140,11 +140,11 @@ function drawMotorTempChart() {
 function drawPackAmpHoursChart() {
     var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
-        ['AmpHours', packAmpHours]
+        ['Pack Ahr', packAmpHours]
     ]);
 
     var options = {
-        width: 400, height: 150,
+        width: 400, height: 120,
         redFrom: 400, redTo: 500,
         yellowFrom: 250, yellowTo: 400,
         minorTicks: 5, max:500 
@@ -157,11 +157,11 @@ function drawPackAmpHoursChart() {
 function drawPackDHBusChart() {
     var data = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
-        ['AmpHours', packAmpHours]
+        ['DC Bus Ahr', packAmpHours]
     ]);
 
     var options = {
-        width: 400, height: 150,
+        width: 400, height: 120,
         redFrom: 400, redTo: 500,
         yellowFrom: 250, yellowTo: 400,
         minorTicks: 5, max:500 
@@ -178,7 +178,7 @@ function drawPackChargeStateChart() {
     ]);
 
     var options = {
-        width: 400, height: 150,
+        width: 400, height: 120,
         redFrom: 0, redTo: 10,
         yellowFrom: 10, yellowTo: 40,
         minorTicks: 5
@@ -195,7 +195,7 @@ function drawPackVoltageChart() {
     ]);
 
     var options = {
-        width: 400, height: 150,
+        width: 400, height: 120,
         redFrom: 400, redTo: 500,
         yellowFrom: 250, yellowTo: 400,
         minorTicks: 5, max:500 
@@ -212,10 +212,10 @@ function drawRpmChart() {
     ]);
 
     var options = {
-        width: 300, height: 115,
-        redFrom: 90, redTo: 100,
-        yellowFrom: 75, yellowTo: 90,
-        minorTicks: 5
+        width: 400, height: 220,
+        redFrom: 1750, redTo: 2000,
+        yellowFrom: 1500, yellowTo: 1750,
+        minorTicks: 5, max: 2000
     };
 
     var chart = new google.visualization.Gauge(document.getElementById('rpm'));
@@ -231,7 +231,7 @@ function drawSpeedometerChart() {
 	]);
 
 	var options = {
-	  width: 800, height: 260,
+	  width: 400, height: 220,
 	  redFrom: 90, redTo: 100,
 	  yellowFrom:75, yellowTo: 90,
 	  minorTicks: 5

@@ -43,12 +43,18 @@ div#col-3 {
 	}
 div#odometer {
     	background-color: black;
-	width: 100%;
+	width: 70%;
  	color: white;
     	font-size: 40px;
 	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
 }
 div#speedometer {
+	float: left;
+}
+div#rpm {
+	float: left;
 }
 div#packAmpHours,
 div#packChargeState,
@@ -58,7 +64,7 @@ div#motorControlerTemp,
 div#motorTemp,
 div#batteryHeatsinkTemp {
 }
-div#flag{
+div#flag-fine{
 	text-align: center;
 	border:2px black;
 	border-style:solid;
@@ -69,4 +75,20 @@ div#flag{
 	margin-right:auto;
 	font-size:30px;
 	width:50%;
+}
+div#flag-warning{
+	text-align: center;
+	border:2px black;
+	border-style:solid;
+	padding:3px;
+	margin-bottom:5px;
+	margin-top:15px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:30px;
+	width:50%;
+	background-color:red;
+	color:white;
+}
+div#row-1{
 }
