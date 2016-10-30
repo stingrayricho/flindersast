@@ -60,6 +60,7 @@ for (var i = 0; (i < trkptNodes.length) && (i < tempRows.length) && (i < rpmNode
 
 	//var speedRow = rpmNodes[i];
 	//rpm = parseInt(speedRow.getElementsByTagName("rps")[0].childNodes[0].nodeValue);
+    rpm = 300;
 
 	var tempRow = tempRows[i];
 	heatsinkTemp = parseInt(tempRow.getElementsByTagName("Motorcontrolertemp")[0].childNodes[0].nodeValue);
@@ -78,6 +79,7 @@ google.charts.setOnLoadCallback(drawBatteryHeatsinkTempChart);
 google.charts.setOnLoadCallback(drawHeatsinkTempChart);
 google.charts.setOnLoadCallback(drawMotorTempChart);
 google.charts.setOnLoadCallback(drawPackAmpHoursChart);
+google.charts.setOnLoadCallback(drawPackDHBusChart);
 google.charts.setOnLoadCallback(drawPackChargeStateChart);
 google.charts.setOnLoadCallback(drawPackVoltageChart);
 google.charts.setOnLoadCallback(drawRpmChart);
@@ -149,6 +151,23 @@ function drawPackAmpHoursChart() {
     };
 
     var chart = new google.visualization.Gauge(document.getElementById('packAmpHours'));
+
+    chart.draw(data, options);
+}
+function drawPackDHBusChart() {
+    var data = google.visualization.arrayToDataTable([
+        ['Label', 'Value'],
+        ['AmpHours', packAmpHours]
+    ]);
+
+    var options = {
+        width: 400, height: 150,
+        redFrom: 400, redTo: 500,
+        yellowFrom: 250, yellowTo: 400,
+        minorTicks: 5, max:500 
+    };
+
+    var chart = new google.visualization.Gauge(document.getElementById('packDHBus'));
 
     chart.draw(data, options);
 }
